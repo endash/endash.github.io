@@ -1,0 +1,118 @@
+.logo {
+  display: block;
+  width: 355px;
+  height: 130px;
+  background: bottom left no-repeat url('/images/amalgamated.png');
+  margin: 70px 0px;
+}
+
+.container {
+  margin-left: 0px;
+}
+
+#markdown-toc {
+  font-family: courier;
+  font-size: 14px;
+  color: black;
+  list-style: none;
+  text-align: right;
+  padding-top: 10px;
+  line-height: 28px;
+  padding-right: 20px;
+}
+
+#markdown-toc:before {
+  float: right;
+  margin-right: -30px;
+  margin-left: 10px;
+  content: "→";
+  font-family: helvetica, arial, sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+#markdown-toc a {
+  color: black;
+}
+
+#markdown-toc a:active {
+  font-weight: bold;
+}
+
+h2 {
+  font-family: courier;
+  font-size: 20px;
+}
+
+.post h3 {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .5);
+  margin-top: 42px;
+  margin-bottom: 21px;
+}
+
+.post h3:first-of-type {
+  display: none;
+}
+
+.post ul {
+  list-style: none;
+  padding-left: 30px;
+}
+
+.post li {
+  margin: 14px 0px 20px 0px;
+  padding: 0px;
+  font-family: courier;
+  font-size: 14px;
+  color: black;
+}
+
+.post li p {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 12px;
+  color: rgba(0, 0, 0, .6);
+  margin-top: 14px;
+  margin-bottom: 28px;
+}
+
+.post li p:first-of-type {
+  font-family: courier;
+  font-size: 14px;
+  color: black;
+  margin-bottom: 14px;
+}
+
+.post li:before {
+  position: absolute;
+  display: block;
+  margin-top: 4px;
+  margin-left: -30px;
+  margin-right: 20px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  vertical-align: center;
+}
+
+
+.other-0 p { opacity: .5; }
+.other-0:before { background-color: rgba(0, 0, 0, .1); }
+.other-1:before { background-color: rgba(0, 0, 0, .19); }
+.other-2:before { background-color: rgba(0, 0, 0, .28); }
+
+.bugfix-0 p { opacity: .5; }
+.bugfix-0:before { background-color: #def2c5; }
+.bugfix-1:before { background-color: #bdd69f; }
+.bugfix-2:before { background-color: #8faf66; }
+
+.feature-0:before { background-color: #d2e1f7; }
+.feature-1:before { background-color: #8daad3; }
+.feature-2:before { background-color: #4f76b0; }
+
+.api-0 p { opacity: .5; }
+.api-0:before { background-color: #f7d2d4; }
+.api-1:before { background-color: #d38d92; }
+.api-2:before { background-color: #b04f54; }

@@ -1,0 +1,6 @@
+name: Amalgamated Magic
+markdown: kramdown
+pygments: true
+permalink: /:title
+kramdown:
+  auto_ids: true
