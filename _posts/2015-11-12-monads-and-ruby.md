@@ -130,9 +130,11 @@ None = Class.new do
 end
 {% endhighlight %}
 
-That's it. That's all we need in order to conform to the laws. There is, almost literally, nothing to it when written down in actual code. Concerned that `#bind` will let you return anything you damn well please? So will almost any other Ruby method. Maybe throw in an `#is_a?` check to ensure either a `Some` or `None` is returned, but that only gets you part of the way there, so don't sweat it too much. I don't mean "don't test your code" or even "don't do basic sanity checking", but don't get too caught up in the lack of type checking. That's a red herring, and either way your monadic code isn't any worse off than the rest of your Ruby code in that regard.
+That's it. That's all we need in order to conform to the laws. There is, almost literally, nothing to it when written down in actual code. Concerned that `#bind` will let you return anything you damn well please? So will almost any other Ruby method, so don't sweat it too much. I don't mean "don't test your code," or anything so laissez-faire, but don't get too caught up in the lack of type checking. That's a red herring, and either way your monadic code isn't any worse off than the rest of your Ruby code in that regard.
 
-One thing to be careful of: `#bind` has to return a monad of the same kind. Returning `Some` from an `Array#bind` call, or `[]` from a `Some#bind` are both monads, and will both respond to `#bind` in turn, but they aren't valid invocations. You can nest `#bind` calls, of course, but when it comes time to return, make sure you're returning the same kind of monad as you started with.
+One very real downside to forcing your code to care about return types is that you lose the benefit of duck typing, and couple your use of a monad to your specific implementation. Theoretically, if you were to use a library or other shared code with methods that returned a `Maybe`, its return values should be interchangeable with your implementations. `Some#bind` will work as expected, `None#bind` will short-circuit as expected, and so on. Now, there might be other differences you care about (particularly around what utility methods are implemented/exposed), but when it comes to the monad type, the behaviour of `#bind` is the only thing that matters.
+
+One more thing to be careful of: `#bind` has to return a monad of the same kind. Returning `Some` from an `Array#bind` call, or `[]` from a `Some#bind` are both monads, and will both respond to `#bind` in turn, but they aren't valid invocations. You can nest `#bind` calls, of course, but when it comes time to return, make sure you're returning the same kind of monad as you started with.
 
 {% highlight ruby %}
 arr = [2, 5, 7, 9, 4]
