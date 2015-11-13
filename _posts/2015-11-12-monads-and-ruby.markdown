@@ -5,7 +5,6 @@ categories: jekyll update
 color: blue
 layout: post
 ---
-
 Monads have a weird and varied reputation outside of the FP universe. For Rubyists, in particular, monads and functional programming can look alien and nearly unparseable. Ruby is aggressively object oriented—it doesn't even have first-class functions, technically—and the foreign nature of a lot of the background necessary to grok monads leads to indifference at best and hostility at worst.
 
 On that score, I once overheard (after mentioning monads at a Ruby meetup) someone define a monad as "something assholes talk about to seem smart." There is way too much knee-jerk rejection by some in the Ruby community of things they don't immediately understand or find comfortable, but that's another post—or multi-year psychological survey—entirely. This isn't an article about why monads are awesome and why Ruby devs should love them.
