@@ -33,6 +33,7 @@ body > header {
   flex-direction: row;
 
   > div {
+    position: relative;
     flex: 1;
 
     &:first-child {
@@ -46,14 +47,20 @@ body > header {
     }
   }
 
-  .logo {
-    flex: 1;
+  a.logo {
     display: inline-block;
-    width: 102px;
-    height: 30px;
-    background: url('/assets/logo.png') no-repeat $background-color center center;
-    background-size: 102px 30px;
-    margin: 15px;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+
+    span {
+      display: inline-block;
+      width: 102px;
+      height: 30px;
+      background: url('/assets/logo.png') no-repeat $background-color center center;
+      background-size: 102px 30px;
+      margin: 15px;
+    }
   }
 
   ul.links {
