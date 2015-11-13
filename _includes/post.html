@@ -1,0 +1,9 @@
+{% assign color = post.title.size | modulo: 6 %}
+<article class="{% if post.color %}{{post.color}}{% else %}{{ site.colors[color] }}{% endif %}">
+  <header>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+    <h1>{{ post.title }}</h1>
+  </header>
+
+  {{ post.content }}
+</article>

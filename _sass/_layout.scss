@@ -1,0 +1,123 @@
+
+
+article {
+//  padding-top: 0.2em;
+//  padding-bottom: 2em;
+
+  background: white;
+  width: $content-width;
+  margin: 0em auto 8em auto;
+  font-size: 1.4em;
+  line-height: 1.35;
+
+  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.08)
+}
+
+article p {
+  margin: 1.33em 0;
+}
+
+article > p:last-child {
+  padding-bottom: 2.5em;
+}
+
+article p, article li {
+  color: $text-color;
+  font-size: 1.07em;
+}
+
+article > h2, article > p, article > ul, article > blockquote, article header > * {
+  padding-left: $horizontal-padding;
+  padding-right: $horizontal-padding;
+}
+
+article > header {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+article ol {
+  padding-left: 10%;
+}
+
+article ol li {
+  margin: 0.5em 0em;
+}
+
+article h1 {
+  margin: 0;
+  margin-left: -2px;
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+article h2 {
+  margin: 2.2em 0 2em 0;
+  font-weight: 500;
+  font-size: 1.4em;
+  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1), 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 1em;
+  padding-bottom: 1em;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+article figure + h2 {
+  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+article header {
+  padding-top: 1.65em;
+  padding-bottom: 1.6em;
+  margin-bottom: 2.75em;
+  color: white;
+  background: $blue;
+}
+
+article.blue header { background: $blue; }
+article.cyan header { background: $cyan; }
+article.yellow header { background: $yellow; }
+article.orange header { background: $orange; }
+article.redorange header { background: $redorange; }
+article.red header { background: $red; }
+
+article header time {
+  float: right;
+  font-size: 1.15em;
+  font-weight: 100;
+  padding-top: 0.2em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+article blockquote {
+    margin: 1.9em $horizontal-padding;
+    padding-left: 3.75%;
+    border-left: 4px solid $grey-color-light;
+    color: lighten($text-color, 15%);
+    font-size: 1em;
+}
+
+article blockquote p {
+  font-size: inherit;
+  color: inherit;
+  font-weight: inherit;
+}
+
+ul.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.tags li {
+  display: inline-block;
+  font-size: 1.25em;
+  margin: 0 0.3em;
+  font-weight: 200;
+  color: #808080;
+}
+
+ul.tags li:first-child {
+  margin-left: 0;
+  font-weight: 400;
+  color: #666666;
+}

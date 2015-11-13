@@ -1,0 +1,227 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/**
+ * Basic styling
+ */
+body {
+    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    color: $text-color;
+    background-color: $background-color;
+    background-size: 102px 30px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-feature-settings: "kern" 1;
+    -moz-font-feature-settings: "kern" 1;
+    -o-font-feature-settings: "kern" 1;
+    font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    padding: 0;
+    margin: 0;
+}
+
+body > header {
+  display: flex;
+  flex-direction: row;
+
+  > div {
+    flex: 1;
+
+    &:first-child {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  .logo {
+    flex: 1;
+    display: inline-block;
+    width: 102px;
+    height: 30px;
+    background: url('/assets/logo.png') no-repeat $background-color center center;
+    background-size: 102px 30px;
+    margin: 15px;
+  }
+
+  ul.links {
+    display: inline-block;
+    font-size: 0;
+    padding: 0;
+    margin: 15px 25px;
+
+    li {
+      display: inline-block;
+      margin: 8px;
+    }
+
+    span {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      background-repeat: no-repeat;
+      background-size: 42px 42px;
+    }
+
+    span.email {
+      background-image: url('/assets/email.png');
+    }
+
+    span.github {
+      background-image: url('/assets/github.png');
+    }
+  }
+}
+
+
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
+%vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+
+/**
+ * Images
+ */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+
+/**
+ * Figures
+ */
+figure > img {
+    display: block;
+}
+
+figcaption {
+    font-size: $small-font-size;
+}
+
+
+
+/**
+ * Lists
+ */
+ul, ol {
+    margin-left: $spacing-unit;
+}
+
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+    }
+}
+
+
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: $base-font-weight;
+}
+
+
+
+/**
+ * Links
+ */
+a {
+    color: $brand-color;
+    text-decoration: none;
+
+    &:visited {
+        color: darken($brand-color, 15%);
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+    }
+}
+
+
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+    font-size: 1.05em;
+    line-height: 1.5em;
+}
+
+pre {
+    margin: 2.5em 0;
+    padding: 2em $horizontal-padding;
+    overflow-x: auto;
+
+    background-color: #404040;
+
+    > code {
+        border: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+
+
+
+
+/**
+ * Clearfix
+ */
+%clearfix {
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+/**
+ * Icons
+ */
+.icon {
+
+    > svg {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+
+        path {
+            fill: $grey-color;
+        }
+    }
+}
