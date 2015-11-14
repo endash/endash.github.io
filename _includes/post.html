@@ -10,4 +10,7 @@
   {% else %}
     {{ content }}
   {% endif %}
+  {% if include.promo %}
+    {% include promo.html %}
+  {% endif %}
 </article>

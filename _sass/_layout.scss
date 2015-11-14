@@ -17,13 +17,14 @@ article p {
   margin: 1.33em 0;
 }
 
-article > p:last-child {
-  padding-bottom: 2.5em;
+article > p:last-of-type {
+  padding-bottom: 4em;
+  margin-bottom: 0;
 }
 
 article p, article li {
   color: $text-color;
-  font-size: 1.07em;
+  font-size: 1.1em;
 }
 
 article > h2, article > p, article > ul, article > blockquote, article header > * {
@@ -34,6 +35,53 @@ article > h2, article > p, article > ul, article > blockquote, article header > 
 article > header {
   padding-left: 0;
   padding-right: 0;
+}
+
+article > footer {
+  @extend %clearfix;
+  padding-top: 1.2em;
+  padding-bottom: 3em;
+
+  box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+
+  .photo {
+    position: relative;
+    float: left;
+    width: 22%;
+    min-height: 102px;
+    background-image: url('/assets/headshot.png');
+    background-repeat: no-repeat;
+    background-position: 45px 22px;
+    background-size: 80px 80px;
+  }
+
+  .text {
+    float: left;
+    width: 78%;
+    font-size: 0.95em;
+
+    p {
+      padding-right: $horizontal-padding;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: inline-block;
+        font-weight: 600;
+        margin-right: 0.5em;
+
+        a {
+          &, &:active, &:hover, &:visited {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
 }
 
 article ol {
