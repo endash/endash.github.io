@@ -54,7 +54,7 @@ refine Array do
   end
 end
 
-[1, 2, 3].map { |x| [x + 1] }
+[1, 2, 3].bind { |x| [x + 1] }
 => [2, 3, 4]
 {% endhighlight %}
 
