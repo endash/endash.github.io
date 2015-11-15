@@ -49,7 +49,7 @@ Following these three rules can help put the focus back on writing well-structur
 
 In these situations one must keep in mind that "unit" and "class" are not identical, and to ask not "how can I possibly remove these dependencies from *my class*" but "how do I remove *my code* from this class, which I don't really own?" By moving those methods off to other classes as appropriate (formatting, serializing, and complex validations are things that might be on an AR class that can easily be broken out into their own plain-old-ruby classes) we've accomplished the same thing. So much ActiveRecord-dependent code can be refactored to depend only on a hash (or OpenStruct) of attributes.
 
-It's possible to care about good design and still use monolithic frameworks. Finding ways to take ownership of our code away from the framework is crucial. Your tests should be a searchlight, pointing out places where your code is unnecessarily tangled up in someone else's class hierarchy.
+It's possible to use monolithic frameworks and still care about good design. Finding ways to take ownership of our code away from the framework is crucial. Your tests should be a searchlight, pointing out places where your code is unnecessarily tangled up in someone else's class hierarchy.
 
 ## Preventing bad testing habits
 
@@ -59,13 +59,13 @@ Developers often begin their professional life with a few high-level heuristics 
 2.  "DRY" code up by relying on libraries as much as possible
 3.  MVC means my app is made up of models, views, and controllers
 
-It's easy to see how these lead to large, fragmented classes tightly coupled to oodles of dependencies. This code is going to be difficult to test well in any circumstance, and will bear little resemblance to anything that was "test-driven." I'd like to suggest some replacements:
+It's not difficult to see how these lead to large, fragmented classes tightly coupled to oodles of dependencies. The resulting code is going to be difficult to test well in any circumstance, and will bear little resemblance to anything that was "test-driven." I'd like to suggest some replacements:
 
 1.  Minimize the number of dependencies per class.
 2.  Minimize the number of classes dependent on an external dependency.
 3.  Write the code first, worry what "category" each class falls into later.
 
-The first will result in more classes, but they'll be more easily tested, refactored, and maintained. The second encourages dependencies to be isolated into bridge, adapter, or facade classes, keeping the dev's code dependent on interfaces he or she owns. The third breaks the MVC (among others) intuition pump that says every class we write has to fit one of two or three possible roles. A dev utilizing these heuristics will find themselves asking "how do I unit test this" far less frequently.
+The first will result in more classes, but they'll be more easily tested, refactored, and maintained. The second encourages dependencies to be isolated into bridge, adapter, or facade classes, keeping the dev's code dependent on interfaces he or she owns. The third breaks the MVC (among others) intuition pump that says every class we write has to fit one of two or three possible roles. A dev utilizing these heuristics will find themselves asking "how do I unit test this?" far less frequently.
 
 Now, "how do I integration test this" is a different question entirely... more on that later.
 
