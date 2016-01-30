@@ -10,6 +10,12 @@ article {
   font-size: 1.4em;
   line-height: 1.45;
 
+  @include media-query($on-palm) {
+    font-size: 1.4em;
+    width: auto;
+    margin: auto;
+  }
+
   box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.08)
 }
 
