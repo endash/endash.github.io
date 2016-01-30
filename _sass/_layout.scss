@@ -53,7 +53,7 @@ article > footer {
   .photo {
     position: relative;
     float: left;
-    width: 22%;
+    width: 150px;
     min-height: 102px;
     background-image: url('/assets/headshot.png');
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@ article > footer {
 
   .text {
     float: left;
-    width: 78%;
+    width: calc(100% - 150px);
     font-size: 0.95em;
 
     p {
