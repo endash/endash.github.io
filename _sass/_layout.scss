@@ -88,6 +88,20 @@ article > footer {
       }
     }
   }
+
+  @include media-query($on-palm) {
+    .photo {
+      float: none;
+      background-position: 22px 22px;
+    }
+
+    .text {
+      width: auto;
+      padding-left: $horizontal-padding;
+      padding-right: $horizontal-padding;
+
+    }
+  }
 }
 
 article ol {
