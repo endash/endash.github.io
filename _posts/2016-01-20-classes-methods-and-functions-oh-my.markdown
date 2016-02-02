@@ -2,7 +2,7 @@
 title:  "Classes, Methods & Functions—Oh My!"
 date:   2016-01-20 12:00:00 -0500
 categories: jekyll update
-color: cyan
+color: orange
 layout: post
 ---
 Lately I've been thinking a lot about responsibilities, and when a given responsibility should be a class, when it should be a method on a related class, and when it should be a function. Methods are almost always a convenient and straightforward option, but they are also inappropriate for a great many of the things you want to do with/to an object. Refactoring, after all, very often involves restructuring a warren of methods on a single class into a constellation of objects that work together via composition. There are obvious examples of things that are simple to bang out as methods but really shouldn't be done—saving to particular file formats, generating reports, business transactions—but what big picture rules are there to guide us?
