@@ -2,7 +2,7 @@
 title:  "Xcode Playgrounds and Incorrect Image Dimensions"
 date:   2016-02-02 12:00:00 -0500
 categories: jekyll update
-color: blue
+color: cyan
 layout: post
 ---
 For a bit of fun I'm going through the [DARPA Shredder Challenge](http://archive.darpa.mil/shredderchallenge/) puzzles. The challenge ended 5 years ago (and I'm not a computer scientist, besides), so I'm sticking with the tools and technologies I use professionally, despite their potential inefficiency or inappropriateness for the task.

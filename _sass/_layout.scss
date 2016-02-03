@@ -33,6 +33,15 @@ article p, article li {
   font-size: 1.1em;
 }
 
+article img {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  border: 20px solid #E9E9E9;
+  margin-top: 2.66em;
+  margin-bottom: 2.66em;
+}
+
 article > h2, article > p, article > ul, article > blockquote, article header > * {
   padding-left: $horizontal-padding;
   padding-right: $horizontal-padding;
@@ -172,7 +181,7 @@ article blockquote {
     padding-left: 3.75%;
     border-left: 4px solid $grey-color-light;
     color: lighten($text-color, 15%);
-    font-size: 1em;
+    font-size: 1.1em;
 }
 
 article blockquote p {
