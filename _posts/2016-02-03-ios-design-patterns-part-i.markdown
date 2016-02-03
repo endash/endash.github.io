@@ -31,7 +31,7 @@ protocol ExerciseAttributes {
 extension Exercise: ExerciseAttributes {}
 
 struct ExerciseDecorator {
-  let exercise: ExerciseAttributes?
+  private let exercise: ExerciseAttributes?
 
   init(_ exercise: ExerciseAttributes?) {
     self.exercise = exercise
