@@ -43,9 +43,9 @@ struct ExerciseDecorator {
 }
 {% endhighlight %}
 
-## Storyboards Can Help Managed Composition
+## Storyboards Can Help Manage Composition
 
-I used to have a knee-jerk reaction to storyboards. They felt like magic and like they just took nice, explicit, readable code and hid it behind a somewhat byzantine UI. Then I realized what they really do: they decouple our classes from each other. The storyboard is a lot like a container. It lets us write generic, lightweight classes and combine them together in complex ways without having to hardcode all those relationships, because there's another part of our app directing traffic for us.
+I used to have a knee-jerk reaction to storyboards. They felt like magic and as if all they did was take nice, explicit, readable code and hide it behind a somewhat byzantine UI. Then I realized what they really do: they decouple our classes from each other. The storyboard is a lot like a container. It lets us write generic, lightweight classes and combine them together in complex ways without having to hardcode all those relationships, because there's another part of our app directing traffic for us.
 
 After you've moved all your protocol and ancillary methods from your view controllers, you'll probably end up instead with a bunch of code to initialize and configure the various objects with which the view controller is now coordinating. This is an improvement for sure, but you still end up with classes that mostly exist just to strongly couple themselves to other classes. That glue code is also so much clutter, at best. At worst it has no business being in your view controller class at all, but for a lack of anywhere else to put it. Or is that so?
 
@@ -53,7 +53,7 @@ Amidst the Table View, Label, and Button components in the Interface Builder obj
 
 > Provides a template for objects and controllers not directly available in Interface Builder.
 
-"Not directly available in Interface Builder?" Then what's the point, if we can't do anything with it? Ah, but we can do things with it: we can hook up outlets and actions, and configure the objects with user-defined runtime attributes. We can, simply put, eliminate large swaths of glue code by letting the storyboard instantiate our coordinating classes for us, configuring them with connections to each other and to our views, and even allow us to tweak each object on a case-by-case basis. All with barely any code dirtying up our classes.
+"Not directly available in Interface Builder?" Then what's the point, if we can't do anything with it? Ah, but we can do things with it: we can hook up outlets and actions, and configure the objects with user-defined runtime attributes. We can, simply put, eliminate large swaths of glue code by letting the storyboard instantiate our coordinating classes for us, configuring them with connections to each other and to our views, and even allow us to tweak each object on a case-by-case basis. All with barely any code cluttering up our classes.
 
 <div><img src="/assets/ios-design-patterns-part-i-interface-builder.png" title="Interface Builder screenshot showing custom Object with connections inspector open"></div>
 
