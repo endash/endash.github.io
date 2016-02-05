@@ -59,4 +59,5 @@ Amidst the Table View, Label, and Button components in the Interface Builder obj
 
 You might have a strong intuition that a lot of that belongs in code, as part of "your app." If so, ask yourself: if this belongs in code, does it belong in *this class*? Truly? Cramming bits of orphan code wherever we can just to have a place to put them is a strong code smell. Storyboards help eliminate that. Embrace them.
 
+Huge drawback: The objects you instantiate this way have to be `@objc`, and as such you can't have `@IBOutlet`s for a protocol type that isn't also `@objc`. This means you lose the ability to pass and return non-Objective-C types such as structs, enums, or tuples. This is really frustrating and a significant limitation on using the technique to clean up your view controllers more generally.
 
