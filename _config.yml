@@ -16,5 +16,5 @@ colors: [blue, cyan, yellow, orange, redorange, red]
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: /posts/:title
