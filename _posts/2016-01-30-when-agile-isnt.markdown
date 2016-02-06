@@ -2,7 +2,7 @@
 title:  "When Agile Isn't"
 date:   2016-01-30 12:00:00 -0500
 categories: jekyll update
-color: yellow
+color: orange
 layout: post
 ---
 About three years ago I left an NYC app startup—which I will not name here—after just over a year there. The immediate cause was personal: the emotional stress from an increasingly perilous interpersonal environment on top of an unsustainable and severe "crunch time" schedule brought me to my breaking point. Before too long the root causes that ultimately underlaid my own departure brought the entire company to the breaking point, as well. For a while there was guilt—I should've done more, worked longer, had better ideas, been less of a perfectionist—and then there was a lot of anger. Lately, there's something like acceptance of what happened and my role in it. I don't know how closely the mental process I went through followed the stages of grief, but most of them were in there somewhere.
