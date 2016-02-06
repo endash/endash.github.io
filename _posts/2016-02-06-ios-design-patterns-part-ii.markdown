@@ -1,6 +1,6 @@
 ---
 title:  "iOS Design Patterns: Part II"
-date:   2016-02-06 12:00:00 -0500
+date:   2016-02-06 09:00:00 -0500
 categories: jekyll update
 color: blue
 layout: post
