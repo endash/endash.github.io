@@ -2,7 +2,7 @@
 title:  "iOS Design Patterns: Part I"
 date:   2016-02-03 12:00:00 -0500
 categories: jekyll update
-color: cyan
+color: yellow
 layout: post
 ---
 I'm working on a brand-spanking-new iPhone app, for the first time in a while, and I'm trying to take a fundamentals-first, good-design approach to development, rather than simply regurgitate the patterns I've used/seen in the past. Here are three "new" approaches I'm taking this time around. Each of these patterns are broadly applicable regardless of your language or platform of choice, but with iOS development, and XCode, they can take a form that, at first, might look odd to someone used to a particular style.
@@ -55,7 +55,7 @@ Amidst the Table View, Label, and Button components in the Interface Builder obj
 
 "Not directly available in Interface Builder?" Then what's the point, if we can't do anything with it? Ah, but we can do things with it: we can hook up outlets and actions, and configure the objects with user-defined runtime attributes. We can, simply put, eliminate large swaths of glue code by letting the storyboard instantiate our coordinating classes for us, configuring them with connections to each other and to our views, and even allow us to tweak each object on a case-by-case basis. All with barely any code cluttering up our classes.
 
-<div><img src="/assets/ios-design-patterns-part-i-interface-builder.png" title="Interface Builder screenshot showing custom Object with connections inspector open"></div>
+<div class="image"><img class="fullbleed" src="/assets/ios-design-patterns-part-i-interface-builder.png" title="Interface Builder screenshot showing custom Object with connections inspector open"></div>
 
 You might have a strong intuition that a lot of that belongs in code, as part of "your app." If so, ask yourself: if this belongs in code, does it belong in *this class*? Truly? Cramming bits of orphan code wherever we can just to have a place to put them is a strong code smell. Storyboards help eliminate that. Embrace them.
 

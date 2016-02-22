@@ -33,13 +33,24 @@ article p, article li {
   font-size: 1.1em;
 }
 
+article div.image {
+//  background: #E9E9E9;
+//  padding: 20px;
+}
+
 article img {
   display: block;
   box-sizing: border-box;
-  width: 100%;
-  border: 20px solid #E9E9E9;
+  margin-left: auto;
+  margin-right: auto;
+
   margin-top: 2.66em;
   margin-bottom: 2.66em;
+  border: 20px solid #e9e9e9;
+
+  &.fullbleed {
+    width: 100%;
+  }
 }
 
 article > h2, article > p, article > ul, article > blockquote, article header > * {
