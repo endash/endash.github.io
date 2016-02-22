@@ -9,7 +9,7 @@ In [When Agile Isn't]({% post_url 2016-01-30-when-agile-isnt %}) I discussed how
 
 <div class="image"><img src="/assets/your-mvp-is-still-your-product-minimized-or-not-comic.png"></div>
 
-I believe this is the original graphic, but I was misremembering it as making the opposite point. It advocates what I call the "concept-first" position, as contrasted with the "product-first" position that I encourage, as a  developer. In software development, for better or worse, an "MVP" is often—if not usually—constructed in terms of being the "MVP" version of some grander, more distant product. This needn't always be the case, but when it is the "concept-first" approach can be disastrous.
+I believe this is the original graphic, but I was misremembering it as making the opposite point. It advocates what I call the "concept-first" position, as contrasted with the "product-first" position that I encourage, as a  developer. In software development, for better or worse, an "MVP" is often—if not usually—constructed in terms of being the "MVP" version of some grander, more distant product. This needn't always be the case, but when it is the "concept-first" approach can be disastrous. Take, for instance, the case of Gamevy, which produced as the "MVP" for their real-money gambling business a "freemium" fake-money product which—while certainly less effort and time-intensive than their ultimate goal—[nearly doomed the company](http://www.infoq.com/articles/lean-startup-killed).
 
 ## Concept First
 
