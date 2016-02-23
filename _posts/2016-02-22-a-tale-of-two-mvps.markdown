@@ -6,7 +6,9 @@ color: blue
 layout: post
 redirect_from: "/posts/your-mvp-is-still-your-product-minimized-or-not/"
 ---
-Modern software development is a dense memeplex teeming with patterns, methodologies, and practices that rapidly mutate and recombine with each other in novel, often infuriating ways. "Agile" is famously a term whose meaning is nebulous and ever-shifting, applied to any set of development processes up to and including waterfall. Another is "Minimum Viable Product," or MVP. Originating with a specific meaning in the Lean Startup movement, MVP has since morphed into a general notion in software development of the small, focused, well-honed feature set of an initial release milestone. Both ideas are valuable, but problems emerge when wisdom that pertains to one kind of MVP is blindly applied forward to the new, mutated MVP. A great example is this graphic, which I've mentioned before and just now stumbled across in an [article on software versioning](https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#.ksapnxei9):
+Modern software development is a dense memeplex teeming with patterns, methodologies, and practices that rapidly mutate and recombine with each other in novel, often infuriating ways. "Agile" is famously a term whose meaning is nebulous and ever-shifting, applied to any set of development processes up to and including waterfall. Another is "Minimum Viable Product," or MVP. Originating with a specific meaning in the Lean Startup movement, MVP has since morphed into a general notion in software development of the small, focused, well-honed feature set of an initial release milestone.
+
+Both ideas are valuable, but problems emerge when wisdom that pertains to one kind of MVP is blindly applied forward to the new, mutated MVP. A great example is this graphic, which I've mentioned before and just now stumbled across in an [article on software versioning](https://medium.com/javascript-scene/software-versions-are-broken-3d2dc0da0783#.ksapnxei9):
 
 <div class="image"><img src="/assets/your-mvp-is-still-your-product-minimized-or-not-comic.png"></div>
 
