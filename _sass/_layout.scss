@@ -68,7 +68,11 @@ article > footer {
   padding-top: 1.2em;
   padding-bottom: 3em;
 
-  box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+
+  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  }
 
   .photo {
     position: relative;
