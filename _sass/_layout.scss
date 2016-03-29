@@ -7,7 +7,7 @@ article {
   background: white;
   width: $content-width;
   margin: 0em auto 8em auto;
-  font-size: 1.45em;
+  font-size: 1.5em;
   line-height: 1.45;
 
   @include media-query($on-palm) {
@@ -17,6 +17,20 @@ article {
   }
 
   box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.08)
+}
+
+article hr {
+  border: 0;
+  height: 10px;
+//  margin: 0em 0;
+//  margin-top: 2em;
+  margin: 2.66em 0 2em 0;
+
+  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+
+  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  }
 }
 
 article p {
@@ -174,8 +188,8 @@ article figure + h2, article div.highlight + h2 {
 }
 
 article header {
-  padding-top: 1.65em;
-  padding-bottom: 1.6em;
+  padding-top: 1.75em;
+  padding-bottom: 1.7em;
   margin-bottom: 2.75em;
   color: white;
   background: $blue;
