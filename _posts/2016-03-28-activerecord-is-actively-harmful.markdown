@@ -27,9 +27,9 @@ ActiveRecord—both as it is implemented and as it is used—is a big driver of 
 How does ActiveRecord lead to coupling? Let me count the ways. The simplest is the globally accessible interface—such as being able to call `where` on any model from anywhere—which can lead to app code littered with knowledge of the database schema, not to mention that every class has complete unfettered access to your entire database. Named scopes aren't much of an improvement. How many named scopes look like this:
 
 {% highlight ruby %}
-scope :with_user, -> { includes(:user) }
-scope :by_newest, -> { order('created_at desc, id desc') }
-scope :by_number, -> { order('number ASC') }
+scope :with_user_and_notes, -> { includes(user: :notes) }
+scope :newest_active, -> { where(active: true).order('created_at desc, id desc') }
+scope :red_color, -> { where(color: red) }
 {% endhighlight %}
 
 Not only does this barely count as syntactic sugar, but they still expose details of the database and remain available globally, as always. The global is still a significant problem—more semantic scopes would be either completely inflexible or forced to incorporate business logic (those will be some fun tests) to be useful in different circumstances. Other bullshit "best practices" like "thin controller, thick model" lead to monster model classes full of business logic—pretty much the definition of tightly coupled code:
