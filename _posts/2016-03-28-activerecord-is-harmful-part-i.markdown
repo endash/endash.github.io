@@ -1,11 +1,12 @@
 ---
-title:  "Introduction to ROM: Part I"
+title:  "ActiveRecord is Harmful"
 date:   2016-03-28 17:00:00 -0400
 categories: jekyll update
 color: blue
 layout: post
+redirect_from: "/posts/introduction-to-rom-part-i"
 ---
-*This is the first part in a series on [Ruby Object Mapper](http://rom-rb.org/), a data access library. This part is mainly a discussion of the motivations behind using ROM over ActiveRecord. The next part will be a more practical overview of ROM, its concepts, and architecture.*
+*This was originally titled "Introduction to ROM: Part I," but seeing as it focuses almost exclusively on AR and Rails, I've decided to rework it into a post specifically about ActiveRecord, with a separate series focusing exclusively on ROM. I've retitled this post to reflect the topic more accurately, but further rework is still forthcoming.*
 
 ---
 
@@ -68,5 +69,3 @@ Let's take a look at the responsibilities a `Post` class has in a Rails app. It 
 Add in things like Paperclip and Devise and the responsibilities explode, before the dev even begins to pile on business responsibilities. What if you want to change how a post is persisted, without changing anything else? Good luck. Want different validations depending on whether the logged in user is an admin? I hope you like duplicated code and hackish workarounds. Persist auto-save drafts to an in-memory store rather than the database? Abandon all hope, ye who enter.
 
 The thing is, when you first start a project or when you start with simple projects and gradually work your way up in terms of complexity, this can look pretty good—of course you don't want to worry about where a particular model is getting stored, or managing sets of validations. Of course! It "just works" ... for now. Eventually, though, all the things that AR makes so easy and simple at first glance will be your "reasons to change"—maybe not today, and maybe not tomorrow, but soon. Then what?
-
-*Part 2, which will actually be about ROM, is coming later this week*
