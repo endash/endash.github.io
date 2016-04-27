@@ -1,6 +1,6 @@
 ---
 title:  "How I Learned to Stop Worrying and Love TDD"
-date:   2016-04-27 10:00:00 -0400
+date:   2016-04-27 9:00:00 -0400
 categories: jekyll update
 color: blue
 layout: post
