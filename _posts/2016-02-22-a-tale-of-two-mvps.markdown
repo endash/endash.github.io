@@ -2,7 +2,7 @@
 title:  "A Tale of Two MVPs"
 date:   2016-02-22 15:00:00 -0500
 categories: jekyll update
-color: cyan
+color: yellow
 layout: post
 redirect_from: "/posts/your-mvp-is-still-your-product-minimized-or-not/"
 ---

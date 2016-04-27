@@ -2,7 +2,7 @@
 title:  "Using Github OAuth For Sign-in"
 date:   2015-11-10 12:00:00 -0500
 categories: jekyll update
-color: orange
+color: redorange
 layout: post
 ---
 This weekend I went to implement sign-in with Github (specifically, since my app is dev-focused). Having used it to sign into apps in the past, I had the vague idea that Github was an OpenID provider. It's not, it's just a plain-old OAuth2 server, so even more than usual it's incumbent on the developer, i.e. me, to ensure it is used securely. There are a few major considerations.

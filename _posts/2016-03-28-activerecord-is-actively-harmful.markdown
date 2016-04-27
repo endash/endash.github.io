@@ -2,7 +2,7 @@
 title:  "ActiveRecord is Actively Harmful"
 date:   2016-03-28 17:00:00 -0400
 categories: jekyll update
-color: blue
+color: cyan
 layout: post
 redirect_from: "/posts/introduction-to-rom-part-i"
 ---
