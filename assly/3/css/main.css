@@ -205,77 +205,30 @@ nav {
   nav li:before {
     display: none; }
 
-body.page h2 {
-  color: #444;
-  font-weight: 300;
-  margin-top: 3em; }
-  body.page h2:first-of-type {
-    margin-top: 0; }
-body.page h3 {
-  color: #444;
-  font-weight: 400;
-  margin-top: 2em;
-  text-align: left; }
-
-span.nav-logo {
-  display: block;
-  width: 156px;
-  height: 35px;
-  margin: 0;
-  margin-top: -3px;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-  background-image: url("/assly/3/assets/nav-logo.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 156px 35px; }
-
-ul#practice-areas {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(0, -50%); }
-  ul#practice-areas li {
-    display: relative;
-    text-align: right; }
-    ul#practice-areas li .item-wrapper {
-      display: inline-block;
-      border-bottom: 0.18em solid rgba(192, 180, 174, 0.33); }
-    ul#practice-areas li a {
-      display: inline-block;
-      background: #7a9299;
-      padding: 0.6em 1.5em 0.48em 1.2em;
-      text-transform: uppercase;
-      color: #e6f1f4;
-      font-family: "Proxima Nova";
-      font-weight: 300;
-      font-size: 0.95em;
-      text-decoration: none; }
-      ul#practice-areas li a:hover {
-        text-decoration: none; }
-    ul#practice-areas li:before {
-      display: none; }
-    ul#practice-areas li:last-child .item-wrapper {
-      border: none; }
-
 nav.main {
   background: #fdfaf6;
-  padding: 1.2em 0;
   margin: 0 auto; }
+  @media (min-width: 970px) {
+    nav.main {
+      padding: 1.2em 0; } }
   nav.main ul {
     list-style: none;
-    padding: 0;
+    padding: 0.5em 0;
     margin: 0; }
-    @media (min-width: 800px) {
+    @media (min-width: 970px) {
       nav.main ul {
+        padding: 0;
         display: flex;
         justify-content: space-between; } }
     nav.main ul li {
       color: #a39b8e;
       text-transform: uppercase;
       font-weight: 300;
-      text-align: center; }
+      text-align: center;
+      padding: 0.5em 0; }
+      @media (min-width: 970px) {
+        nav.main ul li {
+          padding: 0; } }
       nav.main ul li.active a {
         color: #0099b4;
         font-weight: 400; }
@@ -301,6 +254,50 @@ body.home nav.main {
   body.home nav.main li:hover::before {
     background-color: #f0e5d6; }
 
+body.page h2 {
+  color: #444;
+  font-weight: 300;
+  margin-top: 3em; }
+  body.page h2:first-of-type {
+    margin-top: 0; }
+body.page h3 {
+  color: #444;
+  font-weight: 400;
+  margin-top: 2em;
+  text-align: left; }
+
+ul#practice-areas {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%); }
+  @media (min-width: 970px) {
+    ul#practice-areas {
+      display: block; } }
+  ul#practice-areas li {
+    display: relative;
+    text-align: right; }
+    ul#practice-areas li .item-wrapper {
+      display: inline-block;
+      border-bottom: 0.18em solid rgba(192, 180, 174, 0.33); }
+    ul#practice-areas li a {
+      display: inline-block;
+      background: #7a9299;
+      padding: 0.6em 1.5em 0.48em 1.2em;
+      text-transform: uppercase;
+      color: #e6f1f4;
+      font-family: "Proxima Nova";
+      font-weight: 300;
+      font-size: 0.95em;
+      text-decoration: none; }
+      ul#practice-areas li a:hover {
+        text-decoration: none; }
+    ul#practice-areas li:before {
+      display: none; }
+    ul#practice-areas li:last-child .item-wrapper {
+      border: none; }
+
 nav.toc ul {
   padding: 0;
   margin: 0;
@@ -317,10 +314,21 @@ nav.toc ul {
       color: inherit; }
 nav.toc.affix {
   position: relative; }
-  @media (min-width: 992px) {
+  @media (min-width: 970px) {
     nav.toc.affix {
       position: fixed;
       top: 60px; } }
+
+#toc-parent {
+  position: absolute;
+  z-index: 99; }
+
+#toc-parent, section, footer {
+  padding: 2.4em 0; }
+  @media (min-width: 970px) {
+    #toc-parent, section, footer {
+      padding: 4.2em 0;
+      margin: 0; } }
 
 header {
   border-top: 0.3em solid #00677c; }
@@ -330,25 +338,59 @@ header {
     background: url("/assly/3/assets/banner.jpg") no-repeat center center;
     background-size: cover; }
   header div#logo {
-    display: inline-block;
     width: 230px;
     height: 84px;
-    margin-left: -32px;
+    margin: 0 auto;
     background-color: #0099b4;
     background-image: url("/assly/3/assets/logo5.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 175px 50px; }
+    @media (min-width: 970px) {
+      header div#logo {
+        margin: 0;
+        margin-left: -32px; } }
 
-#toc-parent {
-  position: absolute;
-  z-index: 99; }
-
-#toc-parent, section {
-  padding: 2.4em 0; }
-  @media (min-width: 992px) {
-    #toc-parent, section {
-      padding: 4.2em 0; } }
+footer {
+  padding-top: 0;
+  background: rgba(0, 0, 0, 0.15);
+  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center; }
+  @media (min-width: 970px) {
+    footer {
+      text-align: left; } }
+  footer .email {
+    text-align: center; }
+    footer .email a {
+      font-weight: 300;
+      display: inline-block;
+      margin: 0px auto;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.4em; }
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: white; }
+    footer ul li {
+      padding: 1.2em 0; }
+      footer ul li .title {
+        font-size: 0.8em;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.3em; }
+      footer ul li address {
+        font-size: 0.9em;
+        font-weight: 300;
+        font-style: normal;
+        color: rgba(255, 255, 255, 0.83);
+        padding-top: 0.24em; }
+      footer ul li .phone {
+        font-size: 1em;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.83); }
+      footer ul li:before {
+        display: none; }
 
 section {
   position: relative;
@@ -356,37 +398,50 @@ section {
 
 section#cover {
   position: relative;
-  height: 55vw;
-  max-height: 75vh;
+  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   padding: 0; }
+  @media (min-width: 970px) {
+    section#cover {
+      height: 55vw;
+      max-height: 75vh; } }
   section#cover .container {
     position: relative;
     height: 100%; }
   section#cover #background {
-    position: absolute;
-    z-index: -999;
-    width: 100%;
+    background: url("/assly/3/assets/assly2.jpg") no-repeat center center;
+    background-size: cover;
     height: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background: url("/assly/3/assets/assly1.jpg") no-repeat center center;
-    background-size: cover; }
+    background-position: center -40px; }
+    @media (min-width: 970px) {
+      section#cover #background {
+        position: absolute;
+        z-index: -999;
+        width: 100%;
+        left: 50%;
+        transform: translate(-50%, 0); } }
   section#cover div#logo {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 260px;
+    position: relative;
     height: 110px;
-    margin-top: -55px;
     background-color: #0099b4;
     background-image: url("/assly/3/assets/logo5.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 185px 55px; }
+    @media (min-width: 970px) {
+      section#cover div#logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 260px;
+        margin-top: -55px; } }
 
 section#intro {
-  padding: 3.6em 0; }
+  padding: 2em 0; }
+  @media (min-width: 970px) {
+    section#intro {
+      padding: 3.6em 0; } }
   section#intro p {
     color: rgba(255, 255, 255, 0.85);
     font-weight: 300;
@@ -400,54 +455,24 @@ section#intro {
       margin: 1.5em auto 0.5em auto;
       background: url("/assly/3/assets/avvo.png") no-repeat center center;
       background-size: 135px 40px; }
+      @media (min-width: 970px) {
+        section#intro .logos div.avvo {
+          margin-top: 2em; } }
     section#intro .logos div.bbb {
       display: inline-block;
       width: 80px;
       height: 125px;
       background: url("/assly/3/assets/bbb.png") no-repeat center center;
-      background-size: 80px 125px; }
+      background-size: 80px 125px;
+      margin-top: 2em; }
+      @media (min-width: 970px) {
+        section#intro .logos div.bbb {
+          margin: 0; } }
     section#intro .logos .score {
       font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: 400;
       font-size: 1.4em;
       color: white; }
-
-section#contact {
-  padding-top: 0;
-  background: rgba(0, 0, 0, 0.15);
-  font-family: "proxima nova", "Helvetica Neue", Helvetica, Arial, sans-serif; }
-  section#contact .email {
-    text-align: center; }
-    section#contact .email a {
-      font-weight: 300;
-      display: inline-block;
-      margin: 0px auto;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 1.4em; }
-  section#contact ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    color: white; }
-    section#contact ul li {
-      padding: 1.2em 0; }
-      section#contact ul li .title {
-        font-size: 0.8em;
-        font-weight: 600;
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 0.3em; }
-      section#contact ul li address {
-        font-size: 0.9em;
-        font-weight: 300;
-        font-style: normal;
-        color: rgba(255, 255, 255, 0.83);
-        padding-top: 0.24em; }
-      section#contact ul li .phone {
-        font-size: 1em;
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.83); }
-      section#contact ul li:before {
-        display: none; }
 
 section#about div.bullet-points {
   font-weight: 300; }
