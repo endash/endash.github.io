@@ -4,12 +4,7 @@
     <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
     <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
   </header>
-  {% assign content2 = content | strip_newlines %}
-  {% if content2 == "" %}
-    {{ post.content }}
-  {% else %}
-    {{ content }}
-  {% endif %}
+  {{ post.content }}
   {% if include.promo %}
     {% include promo.html %}
   {% endif %}
