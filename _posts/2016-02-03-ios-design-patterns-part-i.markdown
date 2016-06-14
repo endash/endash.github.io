@@ -2,7 +2,7 @@
 title:  "iOS Design Patterns: Part I"
 date:   2016-02-03 12:00:00 -0500
 categories: jekyll update
-color: redorange
+color: red
 layout: post
 ---
 I'm working on a brand-spanking-new iPhone app, for the first time in a while, and I'm trying to take a fundamentals-first, good-design approach to development, rather than simply regurgitate the patterns I've used/seen in the past. Here are three "new" approaches I'm taking this time around. Each of these patterns are broadly applicable regardless of your language or platform of choice, but with iOS development, and XCode, they can take a form that, at first, might look odd to someone used to a particular style.

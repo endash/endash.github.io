@@ -2,7 +2,7 @@
 title:  "How I Learned to Stop Worrying and Love TDD"
 date:   2016-04-27 9:00:00 -0400
 categories: jekyll update
-color: blue
+color: cyan
 layout: post
 ---
 TDD can mean many things—from simple 'test first' practices focused mainly on integration or acceptance tests, all the way down to a highly granular, line-by-line, red-green-refactor methodology. I, personally, am not a TDD purist. I'll use TDD in some circumstances, and take a more relaxed approach in others. Generally speaking, the more concentrated and encapsulated the functionality the more likely I am to use TDD. Try to use TDD with highly diffuse code, and I'm likely to freeze up and suffer from design paralysis. I also picked up some poor testing practices by osmosis in my early years that I've had to mindfully and aggressively prune. The more I prune, the more effectively I find I can use TDD, and the more I find myself actually using TDD. In hindsight, a lot of my aversion to TDD over the years is traceable to my own bad habits and misconceptions—stumbling blocks and speedbumps that can slow the TDD process to a halt.

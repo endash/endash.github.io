@@ -2,7 +2,7 @@
 title:  "iOS Design Patterns: Part II"
 date:   2016-02-06 09:00:00 -0500
 categories: jekyll update
-color: orange
+color: redorange
 layout: post
 ---
 Here are three more iOS development patterns that fly somewhat in the face of answers you might see on Stack Overflow touted as "best practices." Two of these are rock solid and a third is on probationary status, which I'm throwing out there as a discussion point.

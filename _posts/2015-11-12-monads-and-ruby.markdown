@@ -2,7 +2,7 @@
 title:  "Monads and Ruby"
 date:   2015-11-12 11:00:00 -0500
 categories: jekyll update
-color: orange
+color: redorange
 layout: post
 ---
 Monads have a weird and varied reputation outside of the FP universe. For Rubyists, in particular, monads and functional programming can look alien and nearly unparseable. Ruby is aggressively object oriented—it doesn't even have first-class functions, technically—and the foreign nature of a lot of the background necessary to grok monads leads to indifference at best and hostility at worst.
