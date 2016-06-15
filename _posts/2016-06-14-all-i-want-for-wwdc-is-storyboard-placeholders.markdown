@@ -5,11 +5,11 @@ categories: jekyll update
 color: blue
 layout: post
 ---
-One of the unsung heroes of interface builder is the "Custom Object." This isn't a view or a view controller—it doesn't go onto the storyboard canvas. Instead, it goes up in the "scene dock," that bar with little icons (for, for example, the view controller and its exit segue) at the top of a scene. Simply drag from the palette to the scene dock, and then set the class in the inspector and you can start connecting outlets and actions to the object. Then, on instantiation, the object will be initialized for you and connected.
+One of the unsung heroes of Interface Builder is the "custom object." This doesn't go onto the storyboard canvas—it isn't a view or a view controller. Instead, objects goes up in the "scene dock," that bar with little icons (for, for example, the view controller and its exit segue) at the top of a scene. Simply drag from the palette to the scene dock, and then set the class in the inspector and you can start connecting outlets and actions to the object. Then, on instantiation, the object will be initialized for you and connected.
 
 This is pretty great, but the usefulness is somewhat limited by the fact that the storyboard will only initialize the object via its class's designated initializer. That isn't always possible or desirable. In one very, very, very common case—managed object contexts—it isn't possible by any stretch of the imagination. It would, however, save a LOT of glue code and reduce a great deal of coupling if custom objects were just a bit more powerful.
 
-What I'd like to see is the ability to give a custom object a Storyboard ID, in addition to a class. Using the Storyboard ID, an app delegate could register a pre-initialized object with the storyboard that would be used, rather than a fresh object being instantiated.
+What I'd like to see is the ability to give a custom object a storyboard ID, in addition to a class. Using the storyboard ID, an app delegate could register a pre-initialized object with the storyboard that would be used, rather than a fresh object being instantiated.
 
 <div class="image"><img class="fullbleed" src="/assets/storyboard-placeholders.png" title="Interface Builder screenshot showing custom Object with option to specify a storyboard id"></div>
 
