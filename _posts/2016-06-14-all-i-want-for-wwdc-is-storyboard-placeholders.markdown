@@ -1,5 +1,5 @@
 ---
-title:  "All I Want for WWCD is Storyboard Placeholders"
+title:  "All I Want for WWDC is Storyboard Placeholders"
 date:   2016-06-14 9:00:00 -0400
 categories: jekyll update
 color: blue
@@ -29,4 +29,4 @@ func application(application: UIApplication, willFinishLaunchingWithOptions laun
 }
 {% endhighlight %}
 
-And never worry about it again. Your controllers that need access to the MOC magically get access, WITHOUT the previous controller having to care or have access to the MOC itself.
+And never worry about it again. Your controllers that need access to the MOC magically get access, ***without*** the previous controller having to care about or have access to the MOC itself.
