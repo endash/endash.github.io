@@ -12,7 +12,7 @@ Both ideas are valuable, but problems emerge when wisdom that pertains to one ki
 
 <div class="image"><img src="/assets/your-mvp-is-still-your-product-minimized-or-not-comic.png"></div>
 
-While I do not know the exact provenance of this graphic, I can very confidently state that it originally applied not to software development, but to the original Lean Startup concept of the Minimum Viable Product. I know this because it is a great illustration of the MVP in a Lean Startup, and an absolutely horrible illustration of the MVP in software development.
+While I do not know the exact provenance of this graphic (Update: It's either created by [Henrik Kniberg](http://twitter.com/henrikkniberg) or directly derivative of his work), I can very confidently state that it originally applied not to software development, but to the original Lean Startup concept of the Minimum Viable Product. I know this because it is a great illustration of the MVP in a Lean Startup, and an absolutely horrible illustration of the MVP in software development.
 
 ## The MVP in Lean Startup is Concept-First
 
