@@ -2,7 +2,7 @@
 title:  "All I Want for WWDC is Storyboard Placeholders"
 date:   2016-06-14 9:00:00 -0400
 categories: jekyll update
-color: blue
+color: cyan
 layout: post
 ---
 One of the unsung heroes of Interface Builder is the "custom object." This doesn't go onto the storyboard canvas—it isn't a view or a view controller. Instead, objects goes up in the "scene dock," that bar with little icons (for, for example, the view controller and its exit segue) at the top of a scene. Simply drag from the palette to the scene dock, and then set the class in the inspector and you can start connecting outlets and actions to the object. Then, on instantiation, the object will be initialized for you and connected.
