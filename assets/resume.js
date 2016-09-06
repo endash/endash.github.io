@@ -52,7 +52,7 @@ function chart(csvpath) {
         .data(layers)
       .enter().append("path")
         .attr("class", "layer")
-        .attr("d", function(d) { console.log(d); return area(d); })
+        .attr("d", function(d) { return area(d); })
         .style("fill", function(d, i) { return z(i); });
 
     svg.selectAll(".layer")
