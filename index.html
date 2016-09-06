@@ -1,7 +1,180 @@
----
-layout: default
----
-{% for post in site.posts %}
-  {% include post.html promo=forloop.first%}
-{% endfor %}
-
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/resume.css" type="text/css" media="screen">
+        <script src="assets/resume.js" type="text/javascript" charset="utf-8"></script>
+        <script src="http://d3js.org/d3.v4.js"></script>
+    </head>
+    <body>
+      <section>
+        <div class="container-fluid">
+          <header class="row">
+            <div class="col-sm-12">
+              <div class="headshot"></div>
+              <h1>Chris Swasey</h1>
+              <a href="mailto:chris@amalgamated.io" class="email">chris@amalgamated.io</a>
+            </div>
+          </header>
+          <div class="row">
+            <div class="col-sm-6 intro">
+              <p>I'm a Washington, DC-based full-stack developer and designer. After working independently for a while, I'm looking to become part of a product-focused team again. I'm open to relocation for the right opportunity.</p>
+              <p>As a developer, I value good code design, well-architected systems, and nice APIs. I frown upon cargo cult dev practices, "religious" debates, and over-specialization.</p>
+            </div>
+            <div class="col-sm-6">
+              <h4><a style="float: left; visibility: hidden" href="/blog">All</a>Featured Blog Posts<a style="float: right" href="/blog">All</a></h4>
+              <ul class="blog-posts">
+                <li><a href="/posts/when-agile-isnt">When Agile Isn't</a></li>
+                <li><a href="/posts/how-i-learned-to-stop-worrying-and-love-TDD">How I Learned to Stop Worrying and Love TDD</a></li>
+                <li><a href="/posts/activerecord-is-actively-harmful">ActiveRecord is Actively Harmful</a></li>
+                <li><a href="/posts/ios-design-patterns-part-i">iOS Design Patterns: Part I</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Current Projects</h2>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 curling-promo"></div>
+            <div class="col-sm-6">
+              <div class="project-description">
+                <h3>Curling for iPhone</h3>
+                <p>The result of a personal challenge to design, program, and submit an iPhone game in 1 week. Including artwork, but no AI/single player mode.</p>
+                <p>Programmed in Swift with SpriteKit and GameplayKit.</p>
+                <div class="app-store-under-review"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Skills &amp; Technologies</h2>
+        <div class="container-fluid">
+          <div class="row">
+            <svg class="chart"></svg>
+          </div>
+        </div>
+        <div class="box">
+          <ul class="key">
+            <li class="js">HTML/CSS</li>
+            <li class="ruby">JS</li>
+            <li class="html">Ruby</li>
+            <li class="swift">Swift</li>
+            <li class="haskell">Haskell</li>
+          </ul>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <p style="text-align: center">In general, my focus over the past few years has gradually shifted from the web to native (iOS and Mac) development. I enjoy native dev but am not committed one way or another.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12">
+                <p>I've used a lot of languages and technologies over the years. As a programmer, I feel that the ability to adapt to new tools and technologies as required is of much greater importance than claiming <em>n</em> years of experience with any given specific product.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3>Javascript/HTML/CSS</h3>
+                <p>Up until a couple of years ago I was very active in the SproutCore and Ember.js communities. More recently, I've used other frameworks, including React and Angular 2. Each ecosystem has its advantages and in general I'm comfortable working with any modern approach to JS. HTML5 and CSS3 are great, but I feel it's important to recognize their limitations, and not to lionize them as the equal of native apps.</p>
+              </div>
+              <div class="col-sm-6">
+                <h3>Swift</h3>
+                <p>I really enjoy working in Swift. It's not perfect, in particular the inability of bridged Cocoa protocols to deal with some native Swift types is a major pain point. Swift isn't a functional language, but its value types, generics, and support for immutability are very welcome FP-like additions to native iOS and Mac development.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <h3>Ruby</h3>
+                <p>Despite its relentless object-orientation, hostility toward immutability, and dependency hell, Ruby is still bar-none my preferred server-side language. I believe Ruby applications can still be well architected, and written with good coding practices, and as such I favor keeping the focus on business code rather than the framework.</p>
+                <p>I'm happy to work with Rails as part of an application, but do not consider "the Rails way"&mdash;or other received wisdom&mdash;to outweigh solid and time-tested principles of good code design.</p>
+              </div>
+              <div class="col-sm-6">
+                <h3>SQL</h3>
+                <p>I like structured data. I feel that well-normalized relational databases are still appropriate for most applications. Proper database design has to be approached separate from the immediate concerns of programmers, and as such I avoid dev practices that focus on "just dumping JSON" or that allow the web-based API to dictate the structure of the underlying database.</p>
+                <p>That said, I'm not a DB admin, so don't bother quizzing me on replication strategies or arcane SQL syntax.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>Objective-C</h3>
+                <p>I spent a year working on an Objective-C app as part of a team (not reflected in the chart above,) and am perfectly comfortable navigating legacy code as necessary.</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>Haskell</h3>
+                <p>I've recently begun programming Haskell only over the past year or so. Haskell code makes up a very significant fraction of my under-development graphics application, Penumbra.</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>PHP</h3>
+                <p>I did my time in the PHP mines, and haven't looked back. If there's a legacy system floating around in the dark recesses of a server somewhere I could wrangle it easily enough.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Education &amp; Experience</h2>
+        <div class="box">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <ul class="education">
+                  <li>
+                    <div class="name">Wasilla High School <span class="years">2002</span></div>
+                    <p>I graduated from high school. Not much to say about that.</p>
+                  </li>
+                  <li>
+                    <div class="name">Rutgers University <span class="years">2002&ndash;2005</span></div>
+                    <p>I did <em>not</em> graduate from university. Things happen, y'know? For what it's worth, though, I was a <em>Political Science</em> major... so, it really wouldn't be relevant either way.</p>
+                  </li>
+              </div>
+              <div class="col-sm-6">
+                <ul class="jerbs">
+                  <li>
+                    <div class="name">Rutgers University <span class="years">2002&ndash;2005</span></div>
+                    <p>Various short-term programming and other technical jobs. <span class="tag">PHP</span></p>
+                  </li>
+                  <li>
+                    <div class="name">Rutgers&ndash;Bloustein Center For Survey Research <span class="years">2005&ndash;2010</span></div>
+                    <div class="title">Application Developer</div>
+                    <p>Primary dev responsible for a legacy <span class="tag">PHP</span>-based web survey research platform. Rewrote it in <span class="tag">Ruby</span> 2007&ndash;2008.</p>
+                  </li>
+                  <li>
+                    <div class="name">AirPair (defunct) <span class="years">04/2011&ndash;09/2011</span></div>
+                    <div class="title">Technical Co-Founder/Developer</div>
+                    <p>AirPair (no relation to the current company) was a short-lived startup in Los Angeles focused on technology to make air travel more social. <span class="tag">SproutCore (JS)</span></p>
+                  </li>
+                  <li>
+                    <div class="name">GateGuru <span class="years">10/2011&ndash;11/2012</span></div>
+                    <div class="title">Senior Software Engineer</div>
+                    <p>I was the primary UX designer and a supporting engineer (<span class="tag">iOS</span>, <span class="tag">Ruby</span>) for a rewrite of a successful iPhone application targeted at air travelers. </p>
+                  </li>
+                  <li>
+                    <div class="name">Pelonkey <span class="years">03/2013&ndash;03/2014</span></div>
+                    <div class="title">Solo Developer</div>
+                    <p>I was the sole developer, on a contract basis, for this DC-based marketplace for live entertainment and events professionals. I was responsible for the <span class="tag">Ruby</span> server-side app, the <span class="tag">Ember.js</span> dashboard app, and the UX design for both.</p>
+                  </li>
+                  <li>
+                    <div class="name">LimeLeap <span class="years">03/2014&ndash;12/2015</span></div>
+                    <div class="title">Consultant</div>
+                    <p>I was tasked with creating an <span class="tag">Ember.js</span> app to integrate with a <span class="tag">SharePoint</span> backend. The product was a visual forms builder, and the JS app enabled WYSIWYG drag-and-drop specification of data forms. The actual forms themselves were implemented in .NET.</p>
+                  </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <script>
+        chart("/assets/data.csv", "orange");
+      </script>
+    </body>
+</html>
