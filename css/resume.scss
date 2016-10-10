@@ -274,3 +274,15 @@ div.app-store-under-review {
   height: 40px;
   margin-top: 2em;
 }
+
+div.app-store {
+  background: url('/assets/app-store.png') center center no-repeat;
+  background-size: 135px 40px;
+  width: 135px;
+  height: 40px;
+  margin-top: 2em;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
