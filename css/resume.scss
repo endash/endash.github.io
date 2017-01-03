@@ -177,6 +177,7 @@ ul.education, ul.jerbs {
 
 ul.education li, ul.jerbs li {
   margin-bottom: 2em;
+  -webkit-print-color-adjust: exact;
 }
 
 ul.education li:before, ul.jerbs li:before {
@@ -187,6 +188,7 @@ ul.education li:before, ul.jerbs li:before {
   margin-top: 3px;
   margin-left: -24px;
   background-color: #2A7CAD;
+  -webkit-print-color-adjust: exact;
 }
 
 ul.jerbs li:before {

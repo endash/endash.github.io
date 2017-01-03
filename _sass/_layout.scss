@@ -62,7 +62,7 @@ article img {
   }
 }
 
-article > h2, article > p, article > ul, article > blockquote, article header > * {
+article > h2, article > h3, article > p, article > ul, article > blockquote, article header > * {
   padding-left: $horizontal-padding;
   padding-right: $horizontal-padding;
 }
@@ -176,6 +176,16 @@ article h2 {
   @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
     box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1), 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
   }
+}
+
+article h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.92);
+}
+
+article p + h3, article ul + h3 {
+  margin-top: 3em;
 }
 
 article figure + h2, article div.highlight + h2 {
