@@ -19,7 +19,7 @@ Let's say you switch. At this point, your choice is locked in. The host reminds 
 
 There remains, of course, a 66% likelihood of winning the car.
 
-There was always going to be a goat, behind either door A or door B (or both, of course.) And the host was always going to tell which one had the goat, whether or not it was door A or door B. You have received absolutely zero new information that would affect your odds of winning the car.
+There was always going to be a goat, behind either door A or door B (or both, of course.) And the host was always going to tell which one had the goat, regardless of whether it was door A or door B. You have received absolutely zero new information that would affect your odds of winning the car.
 
 This scenario is completely identical to the original formulation, where the option to switch is given after the goat is revealed. There is no new information, you always knew there was a goat, and you knew the host was going to show you one. The key to all of this, and what makes it counter to our intuitions, is that the door opened to reveal the goat wasn't chosen *randomly.* The host was *never* going to open your door, even if it held a goat. So, even though there are now two unopened doors to choose between, the odds aren't equal because the two sets of doors were treated differently.
 
