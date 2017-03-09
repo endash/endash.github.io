@@ -33,6 +33,10 @@ section:last-of-type {
   }
 }
 
+section#projects .row {
+  margin-bottom: 3em;
+}
+
 section > div.box {
   background: white;
   margin: 0;
@@ -245,6 +249,12 @@ ul.blog-posts li a:hover {
   font-weight: 400;
 }
 
+div.pocket-planner-promo {
+  min-height: 380px;
+  background: url('/assets/pocket-planner-promo.png') center center no-repeat;
+  background-size: 420px 380px;
+}
+
 div.curling-promo {
   min-height: 280px;
   background: url('/assets/curling-promo.png') center center no-repeat;
@@ -254,8 +264,18 @@ div.curling-promo {
 div.project-description {
   background: white;
   margin: 0 -15px;
-  min-height: 280px;
-  padding: 2.5em 2em 1em 2em;
+  padding: 2.5em 2em 1.25em 2em;
+
+  &.curling {
+    min-height: 280px;
+  }
+}
+
+div.project-link {
+  margin: 1em 0;
+  margin-right: -15px;
+  background: white;
+  padding: 1.5em 2em 1.5em 2em;
 }
 
 @media (min-width: 760px) {
