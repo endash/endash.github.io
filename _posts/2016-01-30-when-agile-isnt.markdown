@@ -25,7 +25,7 @@ Even Agile, which eschews specifications and up-front planning, has an ultimate 
 
 ## The Business Case
 
-I have to first say that I have the business awareness of a fruit fly—I once accidentally got going on a rant about "vulture capitalists"—while talking to a venture capitalist. If you need me outside of the dev shop for anything it'd better involve coaching and clear expectations of what it is I'm needed to wear, do, and say. That said, I understand the point of a business is to make money, and ultimately the responsibility of the CEO is to see to that. I have tremendous sympathy for a guy trying to turn an early, surprising success in the app space into a going concern with just a few months of time and with less than a million dollars raised.
+I have to say, first, that I have the business awareness of a fruit fly. I once accidentally got going on a rant about "vulture capitalists"—while talking to a venture capitalist. If you need me outside of the dev shop for anything it'd better involve coaching and clear expectations of what it is I'm needed to wear, do, and say. That said, I understand the point of a business is to make money, and ultimately the responsibility of the CEO is to see to that. I have tremendous sympathy for a guy trying to turn an early, surprising success in the app space into a going concern with just a few months of time and with less than a million dollars raised.
 
 What that meant for the developers is that the concept that was pitched and embarked upon for 3.0 quickly became an iron-clad part of the business plan. I was in no way involved in or privy to the money-raising or deal-making, but I saw how quickly what should have been a "stretch goal" became a hail mary, a hill for the company to die on for lack of anything else to do. It's hard to be "agile" when your "minimum viable product" is determined not by your users or the features you want and can implement quickly, but by the need to meet unyielding business case requirements. Our "minimum viable product" was the company-saving potential of a "Wow!" release that would knock everyone's socks off.
 
@@ -33,7 +33,7 @@ That reality, spoken or unspoken, set the tone for the majority of the developme
 
 ## The Unending Marathon
 
-For me the most important tenet of Agile is "release early, and release often." This is the distillation and union of three simple ideas: the minimum viable product, the sprint, and producing "usable software".
+For me, the most important tenet of Agile is "release early, and release often." This is the distillation and union of three simple ideas: the minimum viable product, the sprint, and producing "usable software".
 
 The "MVP" can mean a lot of things to different people—there's a graphic out there somewhere ridiculing the idea that the MVP for an automobile is a push scooter, rather than, for instance, a bare chasis with 4 wheels and an engine. Whatever actual form it takes, in order to be meaningful it has to be two things: (1) Comprised mostly or entirely of code and features that will continue to be relevant for the entire remaining development process and (2) A fairly small fraction of the entire development process. Simply put: you need both something *small* and something you can build *around*.
 

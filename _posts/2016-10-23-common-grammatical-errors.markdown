@@ -23,7 +23,7 @@ Most words are made possessive by adding *'s*. This includes words that already 
 * **Boss's** sounds like **bosses**.
 * Boss' would sound like **boss**.
 * **Boss's**, **bosses**, and **bosses'** all gain both an *s* sound and an *s*, in some fashion.
-* "The **officer's** badge" sounds like "the **officers'** club."
+* "The **officers** ate at the **officers' club**." Same pronunciation, same spelling.
 
 Say the word aloud. If it has an extra *s* sound at the end, then write it after the apostrophe.
 
