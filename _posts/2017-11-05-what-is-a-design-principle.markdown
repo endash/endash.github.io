@@ -5,7 +5,7 @@ categories: jekyll update
 color: blue
 layout: post
 ---
-Engineers love design patterns. They make our jobs easier, because they provide us with a lot of time-tested, proven ways of solving common problems. We also love design _principles_, which help guide good code design. Confusing the two is a common, and unfortunate, mistake that can lead an engineer down a deep well of poor code design that can be hard to escape. So what, exactly, is a design principle?
+Engineers love design patterns. They make our jobs easier, because they provide us with a lot of time-tested, proven ways of solving common problems. We also love design _principles_, which help guide good code design. Confusing the two is a common, and unfortunate, mistake that can lead an engineer down a deep well of poor code design that can be hard to escape. We all know a principle when we see one (Single Responsibility Principle, etc), but what, exactly, _is_ a design principle?
 
 A design principle is a top-down, goal-directed, descriptive heuristic.
 
