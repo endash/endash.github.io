@@ -229,6 +229,16 @@ article blockquote p {
   font-weight: inherit;
 }
 
+article ul {
+  margin-top: -2em;
+
+  li {
+    margin-bottom: 1em;
+  }
+
+  padding-bottom: 4em;
+}
+
 ul.tags {
   list-style: none;
   padding: 0;
