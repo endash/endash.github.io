@@ -77,7 +77,7 @@ Use *I*, *she*, *he*, *they*, or *who* when the person is the one doing somethin
 Incorrect:
 
 * Just between you and I...
-* I went with Bob and him to the bar last night.
+* I went with Bob and he to the bar last night.
 * When is a good time for you to meet with Bob & I?
 * "I don't know who they're angry at, Hillary, you or I."
 
