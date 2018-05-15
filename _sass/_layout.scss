@@ -37,6 +37,10 @@ article > p:last-of-type {
   margin-bottom: 0;
 }
 
+article > p:last-of-type + ul {
+  margin-top: -2em;
+}
+
 article p, article li {
   color: $text-color;
   font-size: 1.1em;
@@ -230,12 +234,14 @@ article blockquote p {
 }
 
 article ul {
-  margin-top: -2em;
-
   li {
     margin-bottom: 1em;
   }
 
+//  padding-bottom: 1em;
+}
+
+article ul:last-child {
   padding-bottom: 4em;
 }
 
