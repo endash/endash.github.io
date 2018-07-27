@@ -1,8 +1,18 @@
 var colorrange = [];
 
-function chart(csvpath) {
-  colorrange = ["#B30000", "#E34A33", "#FC8D59", "#FDBB84", "#FDD49E", "#FEF0D9"];
+function chart(csvpath, color) {
+  if (color == "blue") {
+    colorrange = ["#045A8D", "#2B8CBE", "#74A9CF", "#A6BDDB", "#D0D1E6", "#F1EEF6"];
+  }
+  else if (color == "pink") {
+    colorrange = ["#980043", "#DD1C77", "#DF65B0", "#C994C7", "#D4B9DA", "#F1EEF6"];
+  }
+  else if (color == "orange") {
+    colorrange = ["#B30000", "#E34A33", "#FC8D59", "#FDBB84", "#FDD49E", "#FEF0D9"];
+  }
+  strokecolor = colorrange[0];
 
+  var margin = {top: 20, right: 40, bottom: 30, left: 30};
   var width = 1000;
   var height = 300;
 
@@ -28,8 +38,15 @@ function chart(csvpath) {
       .y0(function(d) { return y(d[0]); })
       .y1(function(d) { return y(d[1]); });
 
+  // var svg = d3.select(".chart").append("svg")
+  //     .attr("width", width + margin.left + margin.right)
+  //     .attr("height", height + margin.top + margin.bottom)
+      // var height = height + margin.top + margin.bottom;
+      // var width = width + margin.left + margin.right;
   var svg = d3.select("svg.chart")
       .attr("viewBox", "0 0 " + width + " " + height)
+    .append("g")
+      // .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
   var graph = d3.csv(csvpath, function(data) {
     var data_ = data.map(function (d) {
@@ -52,7 +69,7 @@ function chart(csvpath) {
         .data(layers)
       .enter().append("path")
         .attr("class", "layer")
-        .attr("d", function(d) { return area(d); })
+        .attr("d", function(d) { console.log(d); return area(d); })
         .style("fill", function(d, i) { return z(i); });
 
     svg.selectAll(".layer")
