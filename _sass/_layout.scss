@@ -1,5 +1,28 @@
 
 
+section {
+  font-size: 1.45em;
+  width: $content-width;
+  margin: 0em auto 0em auto;
+}
+
+section#projects {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-bottom: 4em;
+
+  .project {
+    background: white;
+    padding: 2em;
+
+    h3 {
+      font-weight: 800;
+      font-size: 1.5em;
+      color: #333;
+    }
+  }
+}
+
 article {
   background: white;
   width: $content-width;
@@ -13,254 +36,259 @@ article {
     margin: auto;
   }
 
-  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.08)
-}
+  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.08);
 
-article hr {
-  border: 0;
-  height: 10px;
-  margin: 2.66em 0 2em 0;
+  hr {
+    border: 0;
+    height: 10px;
+    margin: 2.66em 0 2em 0;
 
-  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
 
-  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-}
-
-article p {
-  margin: 1.33em 0;
-}
-
-article > p:last-of-type {
-  padding-bottom: 4em;
-  margin-bottom: 0;
-}
-
-article > p:last-of-type + ul {
-  margin-top: -2em;
-}
-
-article p, article li {
-  color: $text-color;
-  font-size: 1.1em;
-}
-
-article div.image {
-//  background: #E9E9E9;
-//  padding: 20px;
-}
-
-article img {
-  display: block;
-  box-sizing: border-box;
-  margin-left: auto;
-  margin-right: auto;
-
-  margin-top: 2.66em;
-  margin-bottom: 2.66em;
-  border: 20px solid #e9e9e9;
-
-  &.fullbleed {
-    width: 100%;
-  }
-}
-
-article > h2, article > h3, article > p, article > ul, article > blockquote, article header > * {
-  padding-left: $horizontal-padding;
-  padding-right: $horizontal-padding;
-}
-
-article > header {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-article > footer {
-  @extend %clearfix;
-  padding-top: 1.2em;
-  padding-bottom: 3em;
-
-  box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
-
-  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  .photo {
-    position: relative;
-    float: left;
-    width: 150px;
-    min-height: 102px;
-    background-image: url('/assets/headshot.png');
-    background-repeat: no-repeat;
-    background-position: 45px 22px;
-    background-size: 80px 80px;
-  }
-
-  .text {
-    float: left;
-    width: calc(100% - 150px);
-    font-size: 0.95em;
-
-    p {
-      padding-right: $horizontal-padding;
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
     }
+  }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+  p {
+    margin: 1.33em 0;
+  }
 
-      li {
-        display: inline-block;
-        font-weight: 600;
-        margin-right: 0.5em;
+  > p:last-of-type {
+    padding-bottom: 4em;
+    margin-bottom: 0;
+  }
 
-        a {
-          &, &:active, &:hover, &:visited {
-            color: inherit;
-          }
-        }
+  > p:last-of-type + ul {
+    margin-top: -2em;
+  }
+
+  p, li {
+    color: $text-color;
+    font-size: 1.1em;
+  }
+
+  img {
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+
+    margin-top: 2.66em;
+    margin-bottom: 2.66em;
+    border: 20px solid #e9e9e9;
+
+    &.fullbleed {
+      width: 100%;
+    }
+  }
+
+  h2, h3, p, ul, blockquote, header > * {
+    padding-left: $horizontal-padding;
+    padding-right: $horizontal-padding;
+  }
+
+
+  h1 {
+    margin: 0;
+    margin-left: -2px;
+    font-size: 1.5em;
+    font-weight: normal;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &:hover, &:active, &:visited {
+        color: inherit;
+        text-decoration: none;
       }
     }
   }
 
-  @include media-query($on-palm) {
+  h2 {
+    margin: 2.66em 0 2em 0;
+    font-weight: 500;
+    font-size: 1.5em;
+
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.06), 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+    padding-top: 1.1em;
+    padding-bottom: 1.1em;
+    color: rgba(0, 0, 0, 0.92);
+
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1), 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  h3 {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.92);
+  }
+
+
+  p + h3, ul + h3 {
+    margin-top: 3em;
+  }
+
+  figure + h2, div.highlight + h2 {
+    box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  header {
+    position: relative;
+    padding-top: 3em;
+    padding-bottom: 1em;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2.75em;
+    color: white;
+    background: $blue;
+
+    time {
+      float: right;
+      font-size: 1.15em;
+      font-weight: 100;
+      padding-top: 0.2em;
+      color: rgba(255, 255, 255, 0.75);
+    }
+  }
+
+  &:first-of-type header:after {
+    content: 'LATEST POST';
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    left: $horizontal-padding;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    top: 1.5em;
+  }
+
+  &.blue header { background: $blue; }
+  &.cyan header { background: $cyan; }
+  &.yellow header { background: $yellow; }
+  &.orange header { background: $orange; }
+  &.redorange header { background: $redorange; }
+  &.red header { background: $red; }
+
+  > footer {
+    @extend %clearfix;
+    padding-top: 1.2em;
+    padding-bottom: 3em;
+
+    box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      box-shadow: 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+
     .photo {
-      float: none;
-      background-position: 22px 22px;
+      position: relative;
+      float: left;
+      width: 150px;
+      min-height: 102px;
+      background-image: url('/assets/headshot.png');
+      background-repeat: no-repeat;
+      background-position: 45px 22px;
+      background-size: 80px 80px;
     }
 
     .text {
-      width: auto;
-      padding-left: $horizontal-padding;
-      padding-right: $horizontal-padding;
+      float: left;
+      width: calc(100% - 150px);
+      font-size: 0.95em;
 
+      p {
+        padding-right: $horizontal-padding;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          display: inline-block;
+          font-weight: 600;
+          margin-right: 0.5em;
+
+          a {
+            &, &:active, &:hover, &:visited {
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    @include media-query($on-palm) {
+      .photo {
+        float: none;
+        background-position: 22px 22px;
+      }
+
+      .text {
+        width: auto;
+        padding-left: $horizontal-padding;
+        padding-right: $horizontal-padding;
+
+      }
     }
   }
-}
 
-article ol {
-  padding-left: 10%;
-  padding-right: 10%;
-}
+  ol {
+    padding-left: 10%;
+    padding-right: 10%;
 
-article ol li {
-  margin: 0.5em 0em;
-}
-
-article h1 {
-  margin: 0;
-  margin-left: -2px;
-  font-size: 1.5em;
-  font-weight: normal;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    &:hover, &:active, &:visited {
-      color: inherit;
-      text-decoration: none;
+    li {
+      margin: 0.5em 0em;
     }
   }
-}
 
-article h2 {
-  margin: 2.66em 0 2em 0;
-  font-weight: 500;
-  font-size: 1.5em;
 
-  box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.06), 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
-  padding-top: 1.1em;
-  padding-bottom: 1.1em;
-  color: rgba(0, 0, 0, 0.92);
 
-  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-    box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1), 0px -0.5px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-}
-
-article h3 {
-  font-size: 1.25em;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.92);
-}
-
-article p + h3, article ul + h3 {
-  margin-top: 3em;
-}
-
-article figure + h2, article div.highlight + h2 {
-  box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
-}
-
-article header {
-  padding-top: 1.75em;
-  padding-bottom: 1.7em;
-  margin-bottom: 2.75em;
-  color: white;
-  background: $blue;
-}
-
-article.blue header { background: $blue; }
-article.cyan header { background: $cyan; }
-article.yellow header { background: $yellow; }
-article.orange header { background: $orange; }
-article.redorange header { background: $redorange; }
-article.red header { background: $red; }
-
-article header time {
-  float: right;
-  font-size: 1.15em;
-  font-weight: 100;
-  padding-top: 0.2em;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-article blockquote {
+  blockquote {
     margin: 1.9em $horizontal-padding;
     padding-left: 3.75%;
     border-left: 4px solid $grey-color-light;
     color: lighten($text-color, 15%);
     font-size: 1.1em;
-}
 
-article blockquote p {
-  font-size: inherit;
-  color: inherit;
-  font-weight: inherit;
-}
-
-article ul {
-  li {
-    margin-bottom: 1em;
+    p {
+      font-size: inherit;
+      color: inherit;
+      font-weight: inherit;
+    }
   }
 
-//  padding-bottom: 1em;
-}
+  ul {
+    li {
+      margin-bottom: 1em;
+    }
 
-article ul:last-child {
-  padding-bottom: 4em;
-}
+    &:last-child {
+      padding-bottom: 4em;
+    }
+  }
 
-ul.tags {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  ul.tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-ul.tags li {
-  display: inline-block;
-  font-size: 1.25em;
-  margin: 0 0.3em;
-  font-weight: 200;
-  color: #808080;
-}
+    li {
+      display: inline-block;
+      font-size: 1.25em;
+      margin: 0 0.3em;
+      font-weight: 200;
+      color: #808080;
 
-ul.tags li:first-child {
-  margin-left: 0;
-  font-weight: 400;
-  color: #666666;
+      &:first-child {
+        margin-left: 0;
+        font-weight: 400;
+        color: #666666;
+      }
+    }
+  }
 }

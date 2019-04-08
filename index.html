@@ -1,6 +1,14 @@
 ---
 layout: default
 ---
+
+<section id="projects">
+  <div class="project">
+    <a href="http://github.com/endash/earl"><h3>Earl</h3></a>
+    <p>A Ruby library for constructing SQL queries. This began life as a fork of Arel, after Arel got merged into Rails. It has since been completely rewritten. This isn't a replacement for Arel, which ostensibly was a general-purpose library but in practice was deeply wedded to ActiveRecord.
+  </div>
+</section>
+
 {% for post in site.posts %}
   {% include post.html %}
 {% endfor %}

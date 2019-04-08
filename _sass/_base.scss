@@ -32,6 +32,8 @@ body > header {
   display: flex;
   flex-direction: row;
 
+  margin: 2em 0;
+
   > div {
     position: relative;
     flex: 1;
@@ -68,6 +70,7 @@ body > header {
     font-size: 0;
     padding: 0;
     margin: 15px 25px;
+    text-align: center;
 
     li {
       display: inline-block;
