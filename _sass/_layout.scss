@@ -107,7 +107,7 @@ article {
   }
 
   h2 {
-    margin: 2.66em 0 2em 0;
+    margin: 2em 0;
     font-weight: 500;
     font-size: 1.5em;
 
@@ -121,6 +121,19 @@ article {
     }
   }
 
+  figure + h2, div.highlight + h2 {
+    box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  header + h2 {
+    margin-top: -2.75em;
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.06);
+
+    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
+    }
+  }
+
   h3 {
     font-size: 1.25em;
     font-weight: 500;
@@ -130,15 +143,6 @@ article {
 
   p + h3, ul + h3 {
     margin-top: 3em;
-  }
-
-  figure + h2, div.highlight + h2 {
-    box-shadow: 0px 0.5px 0px 0px rgba(0, 0, 0, 0.1);
-  }
-
-  header + h2 {
-    margin-top: -2.75em;
-    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.06);
   }
 
   header {
