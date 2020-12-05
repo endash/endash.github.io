@@ -7,9 +7,9 @@
 
 # Site settings
 title: Endash
-email: christopher.swasey@gmail.com
+email: christopher.swasey@icloud.com
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://endash.github.io" # the base hostname & protocol for your site
+url: "https://endash.github.io" # the base hostname & protocol for your site
 colors: [blue, cyan, yellow, orange, redorange, red]
 
 # Build settings
