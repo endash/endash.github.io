@@ -16,13 +16,13 @@ Routing is, in a sense, state owned by the _web browser_, even as it directly dr
 
 There are a few questions to consider:
 
-# Is either source of truth inherently paramount?
+## Is either source of truth inherently paramount?
 
 From the functional programming perspective, the answer is clearly _routing_. Routing is, ultimately, state owned by the web browser, which means it is external to our app. Trying to disregard, override, or occlude that external state at the application level is no different from a component shadowing a prop with internal state. We'd be risking significant truth desync right at the source of truth itself.
 
 From the application's perspective, the answer is clearly _Redux_. What's of greatest importance is our business processes, data flows, and so forth, as a cohesive whole. URLs, and the HTML5 history API, are either implementation detail of the web browser, or the interface of an _optional_ integration of a native system feature, to taste. Depending on the app, routing can represent a significant amount of derived application state to which the Redux store is more-or-less blind. In the degenerate case, this can lead to the store becoming many sources of truth, with different routed components merely using it as a mechanism to push state out of their rendering function.
 
-# Are the sources of truth orthogonal, or do they overlap?
+## Are the sources of truth orthogonal, or do they overlap?
 
 As discussed above, not _every single_ piece of user interface state needs to be derivable from the source of truth. If I'm developing a storefront, I'm probably not going to promote knowledge of which product thumbnail the user last hovered over, and thus is being shown at full size. If the whole page is remounted and we lose that state, not only is that probably the _preferred_ behavior, but each tiny, inconsequential piece of user interface state we move out to the source of truth crowds out truths we actually care about. Not in terms of system resources, of course, but in terms of the usefulness of the higher-level abstraction: while this source of truth _determines_ the baseline state of the user interface, it _is not_ merely a huge, sprawling cache of all current UI state. From the other side of that coin, the source of truth obviously doesn't need to know about that UI state for its own purposes, otherwise there would be some truth it already owned for the UI to be connected to.
 
@@ -32,7 +32,7 @@ It's not hard to imagine keeping routing-like information in the Redux store, wi
 
 On the flip side, is the opposite situation likely, where what constitutes an allowed route, or determining the current route, is best driven by the Redux store? In the case of authentication, whether or not we have a valid logged in user is something that an authenticated route can check for itself, forcing a redirect if needed. No matter what examples I come up with, I can always find a way to flip it around and have the routing access check, as an user interface matter, depend on some higher-level truth. That's not to say there aren't _any_ valid use cases, however.
 
-# Are the sources of truth appropriately limited in scope?
+## Are the sources of truth appropriately limited in scope?
 
 Surely we don't want trivial UI state just being bumped into Redux for the sake of it, but we also don't want the source of truth to become a random hodge-podge of data and global state, either. It should, in principle, have form and function such that you could imagine extracting just the Redux portion of your app, and running it through some sort of magical static analyzer (like... another programmer) that could deduce your important business process and data flows, without a ton of cruft to gum up the works. That means a flatter, broader organizational structure; a preference for atomic values with semantically meaningful identifiers; and thoughtful abstractions to unify entities and eliminate duplication, instead of just stashing raw JSON straight from the backend.
 
@@ -44,7 +44,7 @@ Obviously, in a storefront a product's page should be routable, with a sensible 
 
 I'm not necessarily arguing one way or the other, for these specific examples. There are plenty of other situations, though, that would historically have meant routing, but where routing is certainly no longer the norm: confirmation screens for destructive operations, for example. Similarly, if we pop up a sign-in dialog we're probably not replacing the URL with `/sign_in?redirect-to=`. What was once either cut-and-dry, or a simple matter of necessity, for server-side apps is no longer so clear with SPAs. One way to make routing and the Redux store more orthogonal may simply be to promote less of the application state to a routing concern than we're used to doing.
 
-# And now, the conclusion...
+## And now, the conclusion...
 
 It seems clear that, at least in many situations, a Redux store as a source of truth can co-exist just fine with React Router, without making a mockery of the "single source of truth." It may take some careful pruning and a perspective shift or two, but their purposes and functions _can_ be largely or entirely kept separate: the router determining the user's particular point-of-view through a given interface into one unified, rationalized, high-level application state; and the Redux store exposing to those differing interfaces a carefully crafted set of action creators that mutate the source of truth in a finite and total number of ways.
 
