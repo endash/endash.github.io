@@ -126,7 +126,7 @@ article {
   }
 
   header + h2 {
-    margin-top: -2.75em;
+    padding-top: 0;
     box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.06);
 
     @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
@@ -151,7 +151,7 @@ article {
     padding-bottom: 1em;
     padding-left: 0;
     padding-right: 0;
-    margin-bottom: 2.75em;
+    margin-bottom: 2.5rem;
     color: white;
     background: $blue;
 
