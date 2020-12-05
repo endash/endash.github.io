@@ -6,7 +6,7 @@ color: blue
 layout: post
 ---
 
-## React is not an architecture
+## 1. React is not an architecture
 
 As modern libraries go, React has remarkably minimal API surface area. This is greatly to its credit: it handles a small set of closely-related concerns and avoids the weird mixture of egoism and insecurity of do-everything frameworks. It's a toolbox starter set, instead of a custom-built multi-tool. This can be confusing for developers used to the guardrails of frameworks that come with neat buckets for all their code—controllers here, data entities there—and an all-encompassing metaphor for how those pieces fit together.
 
@@ -18,7 +18,7 @@ It's incumbent on the developer to anticipate the need for additional structure,
 
 Ultimately, the simplicity of React itself is not a get-out-of-engineering-free card. On the contrary, the onus is on developers and teams to implement generally applicable patterns and principles that will serve us just as well in every future project, and which can be quickly grokked, in the abstract, by new team members.
 
-## React is a library for creating user interfaces
+## 2. React is a library for creating user interfaces
 
 Zoom out too far and this becomes a bit tautological: in one sense, your entire front-end app can be seen as just a user interface for your back-end API. On its own terms, however, React is handling a familiar set of concerns for the front-end: rendering/compositing graphics primitives, and event-driven user input. In other words: it's a view layer. Logic bound up too tightly in a view layer can be hard to reuse and is notoriously difficult to test, and the interface itself can be subject to dramatic changes, so it's important to constrain the scope of your components' responsibilities in much the same way as you would a custom `UIView` in a native iOS application.
 
@@ -28,7 +28,7 @@ Furthermore, the idea isn't that application logic should be separated from the 
 
 A simple rule of thumb is that if code isn't managing presentation or handling events, then it probably shouldn't be baked into a React component. That said: what happens at _runtime_ is potentially a different story. The crucial point is that your code design should prioritize separation of concerns, but ultimately _every_ program is a final, hard coupling of its substructures and dependencies; the fact that a library like `react-redux`, for example, ties everything back together into a meta-structure of React components isn't the issue, the issue is when you sacrifice the ability to separate your application code from React, at any level, even conceptually, you're increasing the carrying cost, and sacrificing flexibility, extensibility, and reliability, for no good reason.
 
-## Don't wage a battle against HTML and CSS
+## 3. Don't wage a battle against HTML and CSS
 
 Fact is: the vast majority of apps that use React will never run on any platform other than HTML and CSS in a current web browser. If we exclude React Native apps, that can just be taken to be 100%. Ignoring the finer points of HTML and CSS, or trying to abstract them away entirely, serves little purpose, but can lead to a _lot_ of extra work and maintenance costs.
 
@@ -38,7 +38,7 @@ It ought to go without saying, but any UI designers on the dev team should also 
 
 Key to succesful application development, with or without React, is knowing your materials, and having a sense of what is high-value-for-effort innovation and what is low-value development hell (custom scroll bars, custom drop shadows, pretty much anything else that can be summarized as "a custom-built version of some browser-provided functionality so that it can be styled slightly more flexibly.") Finding the right balance between abstractionism and reductionism can sometimes be tricky, but that, much more than knowing the syntax of any given programming language, is what developers _do_.
 
-## SVG icons don't need to be React components
+## 4. SVG icons don't need to be React components
 
 On the flip side, the fact that React works by taking XML-style syntax and using it to render and update a DOM tree _can_ be irrelevant implementation detail and a costly red herring. If you're using it for something other than rendering your app's user interface, then there's probably a better, more efficient tool, ranging from a simple template string on up to a purpose-specific library like D3. _Purity_ as a development priority is meaningless, here: there aren't any prizes for unnecessarily baroque solutions that only serve to maintain the comfort blanket of a universal API. (Full disclosure: I'm totally guilty of having written a kludgy port because I didn't really understand why an interface that made sense in one paradigm didn't make any sense in the other. More on that another time.)
 
