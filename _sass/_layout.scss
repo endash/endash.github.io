@@ -83,6 +83,17 @@ article {
     }
   }
 
+  .banner {
+    background: $blue;
+    margin-top: -2.5rem;
+
+    img {
+      border: none;
+      height: 400px;
+    }
+  }
+
+
   h2, h3, p, ul, blockquote, header > * {
     padding-left: $horizontal-padding;
     padding-right: $horizontal-padding;
@@ -148,7 +159,7 @@ article {
 
   header {
     position: relative;
-    padding-top: 3em;
+    padding-top: 2em;
     padding-bottom: 1.5em;
     padding-left: 0;
     padding-right: 0;
@@ -165,15 +176,15 @@ article {
     }
   }
 
-  &:first-of-type header:after {
-    content: 'LATEST POST';
-    position: absolute;
-    color: rgba(255, 255, 255, 0.8);
-    left: $horizontal-padding;
-    font-size: 0.8em;
-    letter-spacing: 2px;
-    top: 1.5em;
-  }
+//  &:first-of-type header:after {
+//    content: 'LATEST POST';
+//    position: absolute;
+//    color: rgba(255, 255, 255, 0.8);
+//    left: $horizontal-padding;
+//    font-size: 0.8em;
+//    letter-spacing: 2px;
+//    top: 1.5em;
+//  }
 
   &.blue header { background: $blue; }
   &.cyan header { background: $cyan; }
