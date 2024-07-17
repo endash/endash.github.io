@@ -1,0 +1,21 @@
+---
+title:  "Some thoughts on Redux"
+date:   2024-07-17 12:00:00 -0500
+categories: jekyll update
+color: blue
+layout: post
+---
+
+It would be hard to overstate the importance of Redux to the early explosion in popularity of React. The two quickly became nigh inseparable—like peas and carrots. Redux's emphasis on immutability and the dead simple action-reducer pattern meshed seamlessly with React's functional reactive programming and one-way data flow. To such an extent, I might even argue, that it became something of an obstacle to a proper conceptualization of React, the component tree, and front end application architecture in general. The two combined to craft a seductive pitch that it was most appropriate to view your app as one giant component function, fed from the top by one giant piece of immutable application state.
+
+This simply isn't true in practice, of course, and structuring your components to optimize re-renders against store changes will quickly result in many quasi-independent component trees, firmly shattering the mirage of a 1-to-1 relationship between the top-level state and UI rendering. Edge cases like ghost children—where a child component may re-render from a store update before the parent component, when it is in fact destined to be removed entirely after the parent has re-rendered—further muddle the conceptual symmetry between Redux and React.
+
+Still, the abstraction was so beautiful that the combination of React+Redux was omnipresent until relatively recently, and of course it still has many adherents.
+
+In retrospect, however, Redux kind of greased its own wheels a bit too much. The written-in-concrete 'best practice' of having a single store per app—which itself was instantiated from a static set of reducers known at build time—pretty much forced that symmetry on somewhat dubious motivations. After all, there's no reason in principle why a single React app can't be a combination of two completely orthogonal sub-applications, each with its own independent store. There are architectural patterns which would encourage exactly this, "micro-frontend" being just one.
+
+An early confusion that this 'best practice' induced was the conflation of "one store" with a "single source of truth." Early React/Redux developers will recall running battles over the correct way to integrate Redux with react-router. The resolution of that concern was, in essence, to disabuse ourselves of the falsehood that single source of truth means having a single library interface, and that as long as the router was the source of truth for routing and Redux was the source of truth for general application state, there was no single compelling reason to integrate or synchronize them. Yet another crack in the illusion of a 1-to-1 symmetry between the Redux store and UI.
+
+More recently, other state management libraries have largely abandoned the notion that one giant store is necessary or proper, and "single source of truth" is returning to its traditionally understood meaning of avoiding duplicative logic or state. This has its own dangers, and the decentralization of external state management these libraries enable could itself work against the SSOT principle. Still, the principle of orthogonal concerns tells us that we _should_ be able to add a piece of shared state to our app without _necessarily_ having to impact on any existing code, and libraries like Valtio or Zustand allow exactly that.
+
+At the end of the day, the only really compelling Redux pillar that remains standing on rock solid foundations is the supremancy of the immutability of data structures. This is what allows us to optimize our component renders, and ensures consistency across all the consumers of a given piece of state. It goes without saying that this is a guarantee that new state management libraries continue to rely on, and even make more robust—for instance via use of proxy facades for update tracking. (Redux reducers, on the other hand, are famously prone to bugs where an object or array is mutated in place, by accident.)
