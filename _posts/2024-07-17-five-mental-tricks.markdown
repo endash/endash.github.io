@@ -26,7 +26,9 @@ I've even used this with some success to get over my anxiety of flying. For me, 
 
 ## The 5-year regret horizon
 
-This one is very simple. Anything that happened more than five years ago simply did not happen. Missed opportunities, professional setbacks, friendship-ending arguments: if it was more than five years ago, it has now rolled off your emotional credit report. The moment something pops into your head from college and you begin to ruminate, visualize a large STOP sign, remind yourself that it happened over 5 years ago, and refocus on something more recent. Odds are, whatever _that_ is won't get its hooks as deeply into you, and your mind will be free to move onto more productive thoughts.
+This one is very simple. Anything that happened more than five years ago simply did not happen. Missed opportunities, professional setbacks, friendship-ending arguments: if it was more than five years ago, it has now rolled off your emotional credit report.
+
+The moment something pops into your head from college and you begin to ruminate, visualize a large STOP sign, remind yourself that it happened over 5 years ago, and refocus on something more recent. Odds are, whatever _that_ is won't get its hooks as deeply into you, and your mind will be free to move onto more productive thoughts.
 
 ## The only goal is to start
 
